@@ -9,15 +9,6 @@ MainWindow::MainWindow(QWidget *parent) :
   setWindowTitle(tr("Ultrasonic devise imitator (Kropus)"));
   ui->tabWidget->clear();
   ui->tabWidget->addTab(new AUsd60N(this),tr("УСД60NImitator"));
-
-  // для временной версии
-  QDate date = QDate::currentDate();
-  if ( (date.year() >= 2015) && (date.month() >= 9) )
-    {
-      QMessageBox::warning(this,"УСД60NImitator","Пробный период прошёл");
-      deleteLater();
-    }
-
 }
 
 MainWindow::~MainWindow()
